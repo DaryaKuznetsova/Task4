@@ -17,7 +17,7 @@ namespace Task4
             double x = method_chord(x0, x1, e);
             Console.WriteLine($"заданная точность: {e} x={x}");
             e = 1;
-            for(int i=0; i<5;i++)
+            for(int i=0; i<5;i++) // цикл для демонстрации разной точности вычислений
             {
                 x = method_chord(x0, x1, e);
                 Console.WriteLine($"заданная точность: {e} x={x}");
@@ -27,7 +27,7 @@ namespace Task4
             Console.WriteLine($"заданная точность: {0} x={x}");
         }
 
-        public static double method_chord(double x_prev, double x_curr, double e)
+        public static double method_chord(double x_prev, double x_curr, double e) // метод поиска корня уравнения
         {
             double x_next = 0;
             double tmp;
@@ -44,7 +44,7 @@ namespace Task4
 
         public static double f(double x)
         {
-            return (2 * Math.Pow(Math.Sin(2 * x), 2)) / 3 - (3 * Math.Pow(Math.Cos(2 * x), 2)) / 4;
+            return (2 * Math.Pow(Math.Sin(2 * x), 2)) / 3 - (3 * Math.Pow(Math.Cos(2 * x), 2)) / 4; // значение функции
         }
 
         public static double ReadAnswer()
